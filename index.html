@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dropout Prediction System</title>
+    <style>
+        body {
+            background: #2c2f55;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #3d4171;
+            padding: 40px;
+            border-radius: 15px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4cafef;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .nav-button {
+            background-color: transparent;
+            border: 2px solid #9c7bff;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .nav-button:hover {
+            background-color: #9c7bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Dropout Prediction System</h2>
+        <form action="/predict" method="post">
+            <label>Attendance Rate (%):</label>
+            <input type="text" name="attendance" required>
+
+            <label>GPA:</label>
+            <input type="text" name="gpa" required>
+
+            <label>Engagement Score (1-10):</label>
+            <input type="text" name="engagement" required>
+
+            <label>Financial Aid:</label>
+            <select name="financial_aid" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label>Mental Health Issues:</label>
+            <select name="mental_health" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Predict Dropout Risk</button>
+        </form>
+        <a href="/quiz"><button class="nav-button">Take a Quiz</button></a>
+        <a href="/courses"><button class="nav-button">Explore Courses</button></a>
+    </div>
+</body>
+</html>
+
+
